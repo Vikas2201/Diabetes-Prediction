@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Detection Project</title>
+    <link rel="stylesheet" href="../static/Style1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+<section>
+    <div class="side">
+        <img src="{{url_for('static', filename='vikas.jpeg')}}" width="350px" height="350px">
+        <h2>Project: Diabetes Detection System</h2>
+        <h2>Using Machine Learning, Python, Flask</h2>
+
+        <h2>Made By Vikas</h2>
+    </div>
+    <div class="vl"></div>
+    <div class="main">
+            <h1>Machine Learning App with Flask</h1>
+            <h3>Enter Your Details</h3>
+            <form action="/predict" method="POST">
+
+                <br/>
+                <h3>Enter your Body mass index (weight in kg/(height in m^2)</h3>
+                <input type="number" step = any class="form-control" id="BMI" name="BMI" required="required">
+                <br/>
+
+                <br/>
+                <h3>Enter your Plasma glucose concentration</h3>
+                <input type="number" step = any class="form-control" id="Glucose" name="Glucose" required="required">
+                <br/>
+
+                <br/>
+                <h3>How old are you?</h3>
+                <input type="number" step=any class="form-control" id="Age" name="Age" placeholder="For example, 6yrs 8 months is 6.8" required="required">
+                <br/>
+
+                <br/>
+                <h3>how many times you are pregnant?</h3>
+                <input type="number" step=any class="form-control" id="Pregnancies" name="Pregnancies" required="required">
+                <br/>
+
+                <br/>
+                <h3>Enter 2-Hour Serum Insulin</h3>
+                <input type="number" step=any class="form-control" id="Insulin" name="Insulin" required="required">
+                <br/>
+
+                <br/>
+                <h3>Enter your Triceps skinfold thickness</h3>
+                <input type="number" step=any class="form-control" id="SkinThickness" name="SkinThickness"  placeholder="In mm" required="required">
+                <br/>
+
+                <br/>
+                <h3>Enter Value Of Diabetes pedigree function</h3>
+                <input type="number" step=any class="form-control" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" required="required">
+                <br/>
+
+                <br/>
+                <h3>Enter Your Diastolic blood pressure</h3>
+                <input type="number" step=any class="form-control" id="BloodPressure" name="BloodPressure" placeholder="In mm Hg" required="required">
+                <br/>
+
+                    <input type="submit" class="btn-info" value="Predict">
+            </form>
+    </div>
+</section>
+</body>
+</html>
